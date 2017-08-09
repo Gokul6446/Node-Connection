@@ -1,8 +1,8 @@
-//var app=angular.module("AppSer",[]);
+var app=angular.module("AppSer",[]);
 
- function meetupsController($scope)
+app.controller("meetupsController",function($scope)
 {
-	$scope.meetupsCount =10;
+	//$scope.meetupsCount =10;
 
 	$scope.meetups=[
 		{
@@ -16,7 +16,9 @@
 		{
 			Name:"Sachin",
 			Speaker :"Hayden"
-		}]
+		}
+
+]
 
 $scope.createMeet=function()
 {
@@ -24,4 +26,4 @@ $scope.createMeet=function()
 	$scope.meetupName='';
 	$scope.meetupSpeaker='';
 }
-};
+});
