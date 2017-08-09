@@ -1,6 +1,8 @@
-app.controller("meetupsController",['$scope','$resource',function($scope,$resource)
+//var app = angular.module('AppSer',['ngResource']);
+app.controller('meetupsController',['$scope','$resource',function($scope,$resource)
 {
 	//$scope.meetupsCount =10;
+   var Meetup=$resource('/api/meetups');
 
 	$scope.meetups=[
 		{
@@ -14,14 +16,14 @@ app.controller("meetupsController",['$scope','$resource',function($scope,$resour
 		{
 			Name:"Sachin",
 			Speaker :"Hayden"
-		}
-
-]
+		}]
 
 $scope.createMeet=function()
 {
 	$scope.meetups.push({Name: $scope.meetupName, Speaker: $scope.meetupSpeaker});
 	$scope.meetupName='';
 	$scope.meetupSpeaker='';
+
+
 }
 }]);
