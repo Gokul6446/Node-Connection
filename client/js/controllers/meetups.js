@@ -1,5 +1,3 @@
-var app=angular.module("AppSer",['ngResource']);
-
 app.controller("meetupsController",['$scope','$resource',function($scope,$resource)
 {
 	//$scope.meetupsCount =10;
