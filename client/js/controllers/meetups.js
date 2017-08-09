@@ -1,6 +1,6 @@
-var app=angular.module("AppSer",[]);
+var app=angular.module("AppSer",['ngResource']);
 
-app.controller("meetupsController",function($scope)
+app.controller("meetupsController",['$scope','$resource',function($scope,$resource)
 {
 	//$scope.meetupsCount =10;
 
@@ -26,4 +26,4 @@ $scope.createMeet=function()
 	$scope.meetupName='';
 	$scope.meetupSpeaker='';
 }
-});
+}]);
